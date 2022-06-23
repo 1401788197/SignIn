@@ -86,15 +86,4 @@ extension ViewController {
         }
     }
 
-    /// 删除打卡
-    @objc func deleteAction(_ sender: Any) {
-        // 签到
-        SignInManager.shared.query(date: Date().addingTimeInterval(3600 * 24 * 1)) { models in
-            for item in models {
-                SignInManager.shared.delete(model: item) { _ in
-                    debugPrint("删除成功")
-                }
-            }
-        }
-    }
 }
