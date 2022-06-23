@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  SignIn
 //
-//  Created by boya on 2022/6/22.
+//  Created by shengjie on 2022/6/22.
 //
 
 import UIKit

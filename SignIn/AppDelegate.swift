@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SignIn
 //
-//  Created by boya on 2022/6/22.
+//  Created by shengjie on 2022/6/22.
 //
 
 import UIKit
@@ -13,7 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
+        
+        // 创建数据库
+        if !DBQueryHelper.createDB(uuid: "2D2EB62B-77BA-4C6B-BEDD-83B1") {
+            debugPrint("创建数据库失败")
+        } else if !SignInManager.shared.createTable() {
+            debugPrint("创建签到记录表失败")
+        }
+        
         return true
     }
 
