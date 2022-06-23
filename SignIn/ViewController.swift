@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     private func setUI() {
         let calendar = GFCalendarView(frameOrigin: .init(x: 10, y: 200), width: view.frame.width - 20)
         view.addSubview(calendar!)
-        calendar?.didSelectDayHandler = {
+        calendar?.didSelectDayHandler = {[weak self]
             year, month, day in
             let nowTime = TimeUtils.nowTimeIntervalByYYYYMMdd()
             let time = String(format: "%d-%02d-%02d", year, month, day)
