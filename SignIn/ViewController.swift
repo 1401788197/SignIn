@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             }
             let vc = DetailViewController()
             vc.signDate = calendarTime
-            self.navigationController?.pushViewController(vc, animated: true)
+            self?.navigationController?.pushViewController(vc, animated: true)
         }
     }
 
